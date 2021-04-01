@@ -1,0 +1,35 @@
+body{
+    background: rgb(139, 201, 236);
+}
+.sect{
+    margin: auto;
+    padding: 10px;
+    background: rgb(0, 0, 0);
+    border: 0;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    min-height: 150px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: white;
+}
+.sect-log{
+    margin: auto;
+    padding: 10px;
+    background: rgb(12, 21, 26);
+    border: 0;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    min-height: 150px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.buttons{
+    margin-top: 30px;
+}
+p{
+    font-weight: bold;
+}

@@ -1,0 +1,120 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="logo1.png" sizes="32x32" />
+    <link rel="icon" type="image/png" src="logo1.png" sizes="16x16" />
+    <title>MF candidates</title>
+</head>
+<body>
+    <!-- top section -->
+  <div class="intro py-3 bg-white text-center">
+    <div class="container-sm text-align">
+  
+     <h2 class="text-dark display-3 my-4 ">Deklaracje Członków MF</h2>
+     <img src="logo.png" class="img-fluid">
+    </div>
+  </div>
+
+    <div class="container">
+        <h2 class="my-5 text-dark text-center d-none" id="declaration">Deklaruję wolę członkostwa w Sekcji Studenckiej Polskiego Towarzystwa Farmaceutycznego MŁODA FARMACJA oddział Łódź.</h2>
+        <form class="mf-log text-light">
+          <div class="sect-log ">
+              <div class="mb-3 ">
+                  <label for="exampleFormControlInput1" class="form-label text-white text-center">LOGIN</label>
+                  <input type="text" class="form-control" id="login" required>
+                </div>
+                <div class="mb-3 ">
+                  <label for="exampleFormControlInput2" class="form-label text-white text-center">HASŁO</label>
+                  <input type="text" class="form-control" id="password" required>
+                </div>
+                  <div class="text-center">
+                    <input type="submit" class="btn btn-dark"> 
+                </div>
+          </div>
+        </form>
+        <div class="sect-logout">
+          <div class="mb-3 ">
+            <div class="text-center">
+              <button  class="btn btn-dark" id="logout">Wyloguj</button>
+              <button  class="btn btn-dark d-inline" id="data">Pobierz dane</button>
+            </div>
+            </div>
+      </div>
+      <div class="sect d-none" id="csvInfo">
+        <p>Pobrano plik w formacie CSV aby otworzyć go w excelu należy:</p>
+        <lu>
+          <li>Otworzyć Excela</li>
+          <li>Nastepnie w zakładce "dane" wybierz "Pobierz z pliku tekstowego"</li>
+          <li>Wybierz pobrany plik i naciśnij importuj</li>
+          <li>Ustaw pochodzenie pliku na --Brak--(opcja na samej górze)</li>
+          <li>Ustaw ogranicznik na przecinek</li>
+          <li>kliknij Załaduj</li>
+        </lu>
+    </div>
+
+        <div class="d-grid gap-2 d-md-block">
+          <button class="btn btn-primary d-none" type="button" id="prev" disabled=true >prev</button>
+          <button class="btn btn-primary d-none" type="button" id="next">next</button>
+          <h3></h3>
+        </div>
+        <form class="mf-form d-none text-light">
+    <div class="sect">
+        <div class="mb-3 ">
+            <label for="exampleFormControlInput1" class="form-label text-white text-center">Podaj imię i nazwisko.</label>
+            <input type="text" class="form-control" id="q1" disabled>
+          </div>
+    </div>
+
+
+    <div class="sect">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label text-white text-center">Podaj swój adres e-mail. Będzie nam on potrzebny do przesłania Ci potrzebnych informacji abyś mógł/ mogła wpłacić opłatę członkowską MF (15zł).</label>
+            <input type="text" class="form-control" id="q2" disabled>
+          </div>
+    </div>
+
+    <div class="sect">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label text-white text-center">Podaj swój numer telefonu.</label>
+            <input type="text" class="form-control" id="q3" disabled>
+          </div>
+    </div>
+</form>
+    </div>
+
+
+
+
+  
+
+
+     <!-- The core Firebase JS SDK is always disabled and must be listed first -->
+     <script src='https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.27.1/date_fns.min.js'></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyCiagET9PME2MsLPSB1ExMiCwyg93Y_iCo",
+    authDomain: "my-server-94285.firebaseapp.com",
+    projectId: "my-server-94285",
+    storageBucket: "my-server-94285.appspot.com",
+    messagingSenderId: "676799456601",
+    appId: "1:676799456601:web:12a934c3caa842518c5848",
+    measurementId: "G-6T6N3B5Z9E"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const  db = firebase.firestore();
+  const auth  = firebase.auth();
+</script>
+    <script src="assets/bundle.js"></script>
+</body>
+</html>
