@@ -7,7 +7,7 @@ try log with:
 Login: example@gmail.com
 password: 123456
 
-this let me to authenticate only one user to read data in firestore
+this let me to authenticate only one user to read data in firestore:
 match /Persons/{PesronId} {
     	allow read: if request.auth.uid != null && request.auth.uid == 'WB6SGoOpoTcIWOBUMDea99ubQPw1'
     }
