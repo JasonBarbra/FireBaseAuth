@@ -7,6 +7,7 @@ const logout = document.getElementById('logout');
 const declaration = document.getElementById('declaration');
 const download = document.getElementById('data');
 const csvInfo = document.getElementById('csvInfo');
+const error = document.querySelector('.error');
 // listen changes auth
 
 var index=0;
@@ -86,6 +87,8 @@ log.addEventListener('submit', (e) =>{
   const password = log.password.value;
   auth.signInWithEmailAndPassword(email,password).then(cred =>{
     console.log(cred.user);
+  }).catch(err =>{
+    error.innerHTML = 'Niepoprawne hasło lub login'
   })
 
 })
