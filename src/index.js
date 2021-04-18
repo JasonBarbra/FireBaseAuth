@@ -10,10 +10,10 @@ const csvInfo = document.getElementById('csvInfo');
 const error = document.querySelector('.error');
 // listen changes auth
 
-var index=0;
-var length=0;
-var jason = [];
-var Jsonindex=0
+let index=0;
+let length=0;
+let jason = [];
+let Jsonindex=0
 
 auth.onAuthStateChanged(user =>{
   if(user){
@@ -43,6 +43,8 @@ auth.onAuthStateChanged(user =>{
       form.q1.value = snapshot.docs[index].data().NameSurname;
       form.q2.value = snapshot.docs[index].data().email;
       form.q3.value = snapshot.docs[index].data().phone;
+    }).catch( err => {
+      console.log('cant connect to database');
     })
   }else{
     form.classList.add('d-none');
@@ -89,6 +91,9 @@ log.addEventListener('submit', (e) =>{
     console.log(cred.user);
   }).catch(err =>{
     error.innerHTML = 'Niepoprawne hasło lub login'
+    setTimeout(() =>{
+      error.innerHTML ='';
+    },2000)
   })
 
 })
